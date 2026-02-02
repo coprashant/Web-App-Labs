@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background-color: rgb(255, 104, 22);
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    display: flexbox;
+    margin: 50px auto;
+    padding: 8px 20px;
+    width: 80%; 
+    height: 80%;
+    background-color: rgb(240, 241, 204);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input{
+    text-align: center;
+    width: 40%;
+    padding: 5px 8px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.task {
+    display: flex;  
+    overflow: hidden;    
+    align-items: center;     
+    gap: 15px;              
+    width: 90%;              
+    max-width: 500px;      
+    margin: 10px auto;     
+    padding: 12px 18px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task span {
+    font-size: 18px;
+    color: #333;
+}
+
+h1{
+    color: blue;
+    margin-top: 20px;
+}
+
+.buttons {
+    background-color: blue;
+    color: white;
+    padding: 4px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: darkblue;
+}
+
+#tasklist {
+    list-style-type: none; 
+    padding: 0;            
+    margin-top: 30px;      
+}
