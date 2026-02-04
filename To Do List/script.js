@@ -1,4 +1,4 @@
-window.onload = function() {  //Load data on page load
+window.onload = function() { 
     loadTasks();
 };
 
@@ -20,7 +20,7 @@ function addTask() {
        `;
     tasklist.append(li);
     inputtask.value = '';
-    saveData();      //save tasks after addition
+    saveData();      
 }
 
 function delete_task() {
@@ -33,7 +33,7 @@ function delete_task() {
             task.remove();
         }
     });
-    saveData();      //save tasks after deletion
+    saveData();      
 }
 
 function saveData() {
