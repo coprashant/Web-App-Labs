@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="header">
+    <a href="{% url 'todo_list' %}">&#8592; Back</a>
+</div>
+
+<div class="login-card">
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Title</label>
+        <input type="text" name="title" value="{{todo.title}}" required>
+
+        <label>Description</label>
+        <textarea name="description" rows="4">{{todo.description}}</textarea>
+
+        <div class="checkbox-container">
+            <label>Completed</label>
+             <input type="checkbox" name="complete" {% if todo.complete %}checked{% endif %} class="checkbox-input">
+        </div>
+
+        <input class="button" type="submit" value="Save Task">
+    </form>
+</div>
+
+{% endblock content %}

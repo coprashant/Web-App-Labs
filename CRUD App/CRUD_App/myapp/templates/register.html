@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="header">
+    <h3>SIGN-UP</h3>
+</div>
+
+<div class="login-card">
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" placeholder="Steve Rogers" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="example@gmail.com" required>
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+
+        <input class="button" type="submit" value="SignUp">
+    </form>
+
+    <p class="check-account">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+
+{% endblock content %}

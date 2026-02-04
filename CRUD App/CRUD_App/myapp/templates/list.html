@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="app-container">
+    <div class="header">
+        <div class="user-info">
+            <h1>Welcome {{request.user.first_name|default:request.user.username|title}}</h1>
+            <p class="status-text">Pending Tasks: <strong>{{count}}</strong></p>
+        </div>
+        <a href="{% url 'logout' %}" class="btn-logout">LOGOUT</a>
+    </div>
+
+    <div class="action-bar">
+        <form method="GET" class="search-container">
+            <input type='text' name='search-area' placeholder="Search for a task..." value="{{search_input}}" class="input-field">
+            <button class="btn-search" type="submit">Filter</button>
+        </form>
+        <a href="{% url 'todo_create' %}" class="btn-add-task">Add Task</a>
+    </div>
+
+    <div class="list-container">
+        {% for task in tasks %}
+        <div class="item-row">
+            <div class="item-content">
+                {% if task.complete %}
+                <span class="completed-text">
+                    <del><a href="{% url 'todo_update' task.id %}">{{task.title}}</a></del>
+                </span>
+                {% else %}
+                <span class="active-text">
+                    <a href="{% url 'todo_update' task.id %}">{{task.title}}</a>
+                </span>
+                {% endif %}
+            </div>
+
+            <a href="{% url 'todo_delete' task.id %}" class="btn-delete">Remove</a>
+        </div>
+        {% empty %}
+        <div class="empty-state">
+            <h3>Your task list is empty right now.</h3>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

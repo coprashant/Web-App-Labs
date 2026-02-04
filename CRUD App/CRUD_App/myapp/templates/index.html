@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task Manager</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f0f2f5;
+        margin: 0; padding: 0;
+        color: #333;
+    }
+    .container { 
+        max-width: 600px; 
+        margin: 20px auto; 
+        padding: 0 10px; 
+    }
+
+    .header {
+        background-color: #4a90e2;
+        color: white;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header h1, .header h3 { 
+        margin: 0; 
+    }
+    .header a { 
+        color: white; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+    .btn-logout { 
+        background: #ed4b39; 
+        padding: 5px 12px; 
+        border-radius: 4px; 
+        font-size: 0.8rem; 
+    }
+    .btn-logout:hover { 
+        background: #7a190e; 
+    }
+
+    .action-bar {
+        background: white;
+        display: flex;
+        padding: 15px;
+        gap: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .search-container { 
+        display: flex; 
+        flex-grow: 1; 
+        gap: 5px; 
+    }
+    .input-field { 
+        flex-grow: 1; 
+        padding: 8px; 
+        border: 1px solid #ddd; 
+        border-radius: 4px; 
+    }
+    .btn-search { 
+        background: #34495e; 
+        color: white; 
+        border: none; 
+        padding: 0 15px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+    }
+    .btn-search:hover { 
+        background: #2c3e50; 
+    }
+    .btn-add-task { 
+        background: #0a5da1; 
+        color: white; 
+        text-decoration: none; 
+        padding: 8px 15px; 
+        border-radius: 4px; 
+    }
+    .btn-add-task:hover { 
+        background: #094678; 
+    }
+
+    .login-card {
+        background: white;
+        padding: 25px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    label { 
+        display: block; 
+        margin-bottom: 5px; 
+        font-weight: 600; 
+        color: #555; 
+        margin-top: 10px; 
+    }
+    input[type="text"], input[type="password"], input[type="email"], textarea {
+        width: 100%; 
+        padding: 10px; 
+        margin-bottom: 10px;
+        border: 1px solid #ddd; 
+        border-radius: 4px; 
+        box-sizing: border-box;
+    }
+    .button {
+        width: 100%; 
+        padding: 12px; 
+        background: #049199; 
+        color: white;
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        font-size: 1rem; 
+        margin-top: 10px;
+    }
+
+    .check-account { 
+        text-align: center; 
+        margin-top: 15px; 
+        font-size: 0.9rem; 
+    }
+
+    .list-container { 
+        background: white; 
+        border-radius: 0 0 10px 10px; 
+    }
+    .item-row {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 15px 20px; 
+        border-bottom: 1px solid #f9f9f9;
+    }
+    .item-row a { 
+        text-decoration: none; 
+        color: #333; 
+    }
+    .btn-delete { 
+        color: #e74c3c; 
+        text-decoration: none; 
+        font-weight: bold; 
+        font-size: 0.8rem; 
+    }
+    .completed-text { 
+        opacity: 0.5; 
+    }
+
+    .checkbox-container { 
+        display: flex; 
+        align-items: center; 
+        gap: 10px; margin: 15px 0; 
+    }
+    .checkbox-input { 
+        width: 18px; 
+        height: 18px; 
+        cursor: pointer; 
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
