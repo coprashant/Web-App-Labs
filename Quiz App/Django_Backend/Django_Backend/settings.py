@@ -28,11 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-#Middleware addition for CORS
-MIDDLEWARE = [
-'corsheaders.middleware.CorsMiddleware',
-...
-]
 CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -51,6 +46,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Django_BAckend.urls'
+ROOT_URLCONF = 'Django_Backend.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Django_BAckend.wsgi.application'
+WSGI_APPLICATION = 'Django_Backend.wsgi.application'
 
 
 # Database

@@ -11,14 +11,17 @@ function App() {
         setStudents(data);
         setLoading(false);
       })
-      .catch(err => console.error("Error fetching students:", err));
   }, []);
 
-    const [state, setState] = useState({
-    num1: Math.ceil(Math.random() * 10),
-    num2: Math.ceil(Math.random() * 10),
-    response: "",
-    score: 0
+  if (loading) {
+    return <h3>Loading data...</h3>;
+  }
+
+  const [state, setState] = useState({
+   num1: Math.ceil(Math.random() * 10),
+   num2: Math.ceil(Math.random() * 10),
+   response: "",
+   score: 0
   });
 
 
@@ -52,7 +55,6 @@ function App() {
 
   return (
     <div className="app" >
-
       <div>
         <h2>Mathematical Quiz</h2>
         <div>{state.num1} + {state.num2}</div>
