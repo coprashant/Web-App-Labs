@@ -1,5 +1,26 @@
-.app{
+body{
+   background-color: rgb(250, 236, 214);
+}
+
+h2{
    text-align: center;
-   margin-top: 50px;
-   font-size: 2rem;
+   font-size: 30px;
+}
+
+.question{
+   margin: 0 35% 0 35%;
+   padding: 1% 0 3% 0;
+   background-color: white;
+   font-size: 20px;
+   text-align: center;
+   border-radius: 20px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.answer{
+   margin: 5% 20% 0 20%;
+   padding: 1px 0 30px 0;
+   border-color: rgb(66, 63, 63);
+   border-radius: 20px;
+   box-shadow: inset 5px 4px 10px rgba(28, 28, 28, 0.5);
 }

@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react'; 
+import './App.css';
 
 function App() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [state, setState] = useState({
+    num1: Math.ceil(Math.random() * 10),
+    num2: Math.ceil(Math.random() * 10),
+    response: "",
+    score: 0
+  });
 
   useEffect(() => {
     fetch('http://127.0.0.1:8000/api/students/')
@@ -10,20 +17,8 @@ function App() {
       .then(data => {
         setStudents(data);
         setLoading(false);
-      })
+      });
   }, []);
-
-  if (loading) {
-    return <h3>Loading data...</h3>;
-  }
-
-  const [state, setState] = useState({
-   num1: Math.ceil(Math.random() * 10),
-   num2: Math.ceil(Math.random() * 10),
-   response: "",
-   score: 0
-  });
-
 
   function updateResponse(event) {
     setState({
@@ -53,28 +48,35 @@ function App() {
     }
   }
 
+  if (loading) {
+    return <h3>Loading data...</h3>;
+  }
+
   return (
-    <div className="app" >
+    <div className="app">
       <div>
         <h2>Mathematical Quiz</h2>
-        <div>{state.num1} + {state.num2}</div>
+        <div className='question'>
+          <h3>Question:</h3>{state.num1} + {state.num2}
+          <div className='answer'>
+            <h3>Answer:</h3>
         <input 
           autoFocus
           onChange={updateResponse} 
           onKeyDown={inputKeyPress} 
           value={state.response} 
         />
+        </div>
+        </div>
         <div>Score: <strong>{state.score}</strong></div>
       </div>
-
-      <hr />
 
       <div>
         <h1>Students List</h1>
         <ul>
           {students.map(s => (
             <li key={s.id}>
-              {s.name} - <span>{s.faculty}</span>
+              {s.name} - {s.faculty}
             </li>
           ))}
         </ul>
