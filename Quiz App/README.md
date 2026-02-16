@@ -5,7 +5,6 @@
 
 ## Objectives  
 - To learn the fundamentals of React and component-based UI development  
-- To understand frontend–backend communication using REST APIs
 - To integrate a React frontend with a Django backend  
 - To build an interactive mathematical quiz application  
 
@@ -21,7 +20,6 @@ The project was developed primarily as a learning exercise to understand React b
 ## Tools & Technologies Used  
 - **Frontend:** React (JavaScript)  
 - **Backend:** Django (Python)  
-- **API Format:** JSON  
 - **Database:** SQLite  
 
 ---
@@ -29,8 +27,7 @@ The project was developed primarily as a learning exercise to understand React b
 ## Output  
 
 ### Mathematical Quiz Interface  
-<img src="Screenshots/Quiz.png" width="600">
-
+<img src="screenshots/Quiz.png" width="600">
 
 ---
 
@@ -43,3 +40,7 @@ This project provided practical exposure to React concepts including state manag
 The Mathematical Quiz Game successfully demonstrates the basic integration of a React frontend with a Django backend. It meets its learning objectives by implementing interactive UI logic and API-based data exchange. This project serves as a strong foundation for advancing toward more complex full-stack applications using modern web technologies.
 
 ---
+
+## Author
+- **Prasant Bhattarai**
+- **THA080BCT025**
