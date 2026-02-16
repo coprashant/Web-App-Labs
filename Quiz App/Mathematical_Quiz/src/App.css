@@ -1,26 +1,69 @@
 body{
    background-color: rgb(250, 236, 214);
+   margin-top: 2%;
+   padding: 20px;
+   font-family: Arial, sans-serif;
 }
 
 h2{
    text-align: center;
    font-size: 30px;
+   margin-top: 0;
 }
 
-.question{
-   margin: 0 35% 0 35%;
-   padding: 1% 0 3% 0;
+h3 {
+   margin: 10px 0;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-column-gap: 20px;
+   align-items: start;
+}
+
+.question, .score, .std_list {
+   padding: 20px;
+   text-align: center;
    background-color: white;
    font-size: 20px;
-   text-align: center;
    border-radius: 20px;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+               rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+               rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .answer{
-   margin: 5% 20% 0 20%;
-   padding: 1px 0 30px 0;
+   text-align: center;
    border-color: rgb(66, 63, 63);
    border-radius: 20px;
    box-shadow: inset 5px 4px 10px rgba(28, 28, 28, 0.5);
+   padding: 15px;
+   margin-top: 15px;
+}
+
+.answer input {
+   padding: 8px;
+   font-size: 18px;
+   text-align: center;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+               rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+               rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   width: 100px;
+}
+
+.std_list ul {
+   list-style: none;
+   padding: 0;
+   text-align: center;
+}
+
+.std_list li {
+   padding: 8px;
+   margin: 5px 0;
+   border-radius: 10px;
+   font-size: 16px;
+   box-shadow: inset 5px 4px 10px rgba(28, 28, 28, 0.3);
 }

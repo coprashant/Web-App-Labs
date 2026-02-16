@@ -53,26 +53,29 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <div>
-        <h2>Mathematical Quiz</h2>
-        <div className='question'>
-          <h3>Question:</h3>{state.num1} + {state.num2}
-          <div className='answer'>
-            <h3>Answer:</h3>
-        <input 
-          autoFocus
-          onChange={updateResponse} 
-          onKeyDown={inputKeyPress} 
-          value={state.response} 
-        />
-        </div>
-        </div>
-        <div>Score: <strong>{state.score}</strong></div>
+    <>
+    <h2>Mathematical Quiz</h2>
+    <div className="container">
+      <div className="score">
+        <div><h3>Score: <br></br><br></br>{state.score}</h3></div>
       </div>
 
-      <div>
-        <h1>Students List</h1>
+      <div className="question">
+        <h3>Question:</h3>
+        <div>{state.num1} + {state.num2}</div>
+        <div className="answer">
+          <h3>Answer:</h3>
+          <input 
+            autoFocus
+            onChange={updateResponse} 
+            onKeyDown={inputKeyPress} 
+            value={state.response} 
+          />
+        </div>
+      </div>
+
+      <div className='std_list'>
+        <h2>Students List</h2>
         <ul>
           {students.map(s => (
             <li key={s.id}>
@@ -82,6 +85,7 @@ function App() {
         </ul>
       </div>
     </div>
+    </>
   );
 }
 

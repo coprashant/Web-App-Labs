@@ -31,8 +31,6 @@ The project was developed primarily as a learning exercise to understand React b
 ### Mathematical Quiz Interface  
 <img src="Screenshots/Quiz.png" width="600">
 
-### Student Data Fetched from Backend  
-<img src="Screenshots/Students.png" width="600">
 
 ---
 
